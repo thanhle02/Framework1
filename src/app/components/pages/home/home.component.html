@@ -1,0 +1,60 @@
+<div class="container">
+    <p class="alert alert-success d-flex justify-content-center">HOME PAGE</p>
+    <div></div>
+    <div>
+        <nav>
+            <ul class="d-flex justify-content-between">
+                <li>
+                    <a href="">Giới Thiệu</a>
+                </li>
+                <li>
+                    <a href="">Liên Hệ</a>
+                </li>
+                <li>
+                    <a href="">Sản Phẩm</a>
+                </li>
+                <li>
+                    <a href="">Đăng Kí </a>
+                </li>
+                <li>
+                    <a href="">Đăng Nhập </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.mzmPJeuwJGTc6FKwRmCA8wHaEo&pid=Api&rs=1&c=1&qlt=95&w=160&h=100"
+                alt="">
+        </div>
+        <div class="container">
+            <h2 style="text-align: center; color: red;"> Trang Sản Phẩm</h2>
+        
+        
+        
+        <div class="box">
+            <div class="" *ngFor="
+                            let product of products | searchBox : searchText;
+                            index as i  ">
+                <p>{{ product.name }}</p>
+                <div class="imge">
+                    <img [src]="product.imageUrl" alt="{{ product.name }}" width="300px" />
+                </div>
+                <div>
+                    <span>{{ product.code }}</span>
+                   
+                </div>
+                <div>
+                    <span>
+                        {{ product.price | currency : "VND" : "symbol" : "1.3-3" }}
+                    </span>
+                    <span>{{ product.releaseDate | date : "dd-MM-yyyy" }}</span>
+                </div>
+        
+            </div>
+        </div>
+        </div>
+        <div>
+            <footer class="alert alert-success d-flex justify-content-center"> Lê Thị Thanh Ph29388</footer>
+        </div>
+    </div>
+
+</div>
